@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Lab 2 CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:500,600,400' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1>Mi página - Laboratorio 2</h1>
+                <h3>Escrito por <strong>Iván Alejandro</strong></h3>
+            </header>
+            <article>
+                <header>
+                    <h3>Mi información de contacto</h3>
+                </header>
+                <p>Nombre: Iván Alejandro Soto Velázquez</p>
+                <p>Matrícula: A00225851</p>
+                <p>Correo: ivanali@outlook.com</p>
+            </article>
+            <article> <!-- Web concepts -->
+                <header>
+                    <h3>Conceptos sobre web</h3>
+                </header>
+                <p><strong>URL: </strong>Referencia a un recurso que se encuentra localizado en una red computacional.</p>
+                <p><strong>MIME: </strong>Extensión al original protocolo SMTP para no solamente poder permitir el intercambio de texto en ASCII entre cliente y servidor, sino también datos como imágenes, audio, video.</p>
+                <p><strong>Métodos y códigos de errores HTML: </strong>
+                    <li>Error 4xx, 5xx: Los códigos 4xx son para identificar que el error viene por parte del cliente, y el error 5xx indica que el error es por parte del servidor.</li>
+                    <li>Bad request 400: La petición al servidor tiene sintaxis incorrecta.</li>
+                    <li>Unauthorized 401: El parámetro de este mensaje da cuáles son los esquemas de autorización necesarios para acceder.</li>
+                    <li>PaymentRequired 402: El parámetro de este mensaje indica cuáles son las especificaciones del esquema de cargo.</li>
+                    <li>Forbidden 403: La petición está prohibida, sin importar la autorización.</li>
+                    <li>Not Found 404: El servidor no ha encontrado nada en el URL especificado.</li>
+                    <li>Internal Error 500: El servidor, por alguna razón, no pudo satisfacer la petición del cliente.</li>
+                    <li>Not implemented 501: El servidor no soporta la facilidad requerida.</li>
+                    <li>Service temporarily overloaded 502: El servidor no puede procesar la petición por la gran demanda de peticiones que tiene que atender.</li>
+                    
+                </p>
+                <p><strong>XML: </strong>Extensible Markup Language. Se utiliza para describir datos de manera que sean entendibles para humanos y máquinas.</p>
+                <p><strong>XHTML: </strong>Es HTML escrito como XML. Más estricto que HTML, y XTML es HTML definido como una aplicación en XML.</p>
+                <p><strong>HTML5: </strong>Es una evolución del conocido lenguaje HTML, con nuevos atributos, elementos y comportamientos.</p>
+                <p><strong>JavaScript: </strong>Lenguaje de scripting para manipulación del DOM de un archivo HTML.</p>
+                <p><strong>PHP: </strong>Lenguaje de scripting para servidor para crear páginas dinámicas e interactivas.</p>
+                <p><strong>JSP: </strong>Java Service Pages es una tecnología para servidor para la creación de aplicación dinámicas basadas en web.</p>
+                <p><strong>AJAX: </strong>Asynchronous JavaScript and XML es una tecnología del lado del cliente para poder obtener datos en una aplicación web de parte de un servidor de manera asincrónica, sin interferir con el comportamiento de la página.</p>
+                <footer>
+                    <p>Referencias:</p>
+                    <p>W3Schools (2015). w3schools. Recuperado de http://www.w3schools.com</p>
+                    <p>W3C (1992). World Wide Web. Recuperado de http://www.w3.org/Protocols/HTTP/HTRESP.html</p>
+                </footer>
+            </article>
+            <footer>
+            HTML escrito en <a href="http://brackets.io/">Brackets</a>
+            </footer>
+            
+        </section>
+        
+        <section> <!-- Questions -->
+            <header>
+                <h3>Preguntas</h3>
+            </header>
+            <strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong>
+            <p>Internet es una masiva red de redes, que conecta millones de computadoras. La World Wide Web es la forma por la cual se puede acceder a la información que está en Internet.</p>
+            <strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong>
+            <p>
+                <ul>
+                    <li><u>GET:</u> Se encarga de rescatar o jalar la información de un URI (identificador del nombre de un recurso).</li>
+                    <li><u>HEAD:</u> A diferencia de GET, que tras la petición obtiene un HTTP header y body, la respuesta a HEAD no regresa un body.</li>
+                    <li><u>POST:</u> Se utiliza para que el servidor acepte la entidad que se está enviando en esta petición y sea una parte más del recurso que se identifica a través de URI. El recurso sabrá cómo manejar la entidad.</li>
+                    <li><u>PUT:</u> A diferencia de POST, que también envía una entidad a un recurso, PUT simplemente pone la entidad en el recurso (reemplazando la existente si es que había una).</li>
+                    <li><u>PATCH:</u> Solicita que una serie de cambios contenidos en la entidad por enviar sean realizados al recurso localizando en el URI.</li>
+                    <li><u>DELETE: </u>Pide que el recurso localizado en el URI sea eliminado.</li>
+                </ul>
+            </p>
+                
+                <strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML como el de la encuesta que constestaste al principio de la actividad? ¿Por qué?</strong>
+                <p>POST, ya que se está enviando una entidad que contiene los datos que se han metido al formulario y el recurso al cual se está enviando sabrá cómo manejarlos.</p>
+                <strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong>
+                <p>GET, lo que hace es jalar la información contenida en el recurso al cual apunta el URL.</p>
+                <strong>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</strong>
+                <p>No, ya que los errores están únicamente definidos en lós codigos 4xx y 5xx, proveniendo del lado de cliente y servidor respectivamente. Un código 2xx indica éxito.</p>
+                <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong>
+                <p>No, ya que es un error del lado del cliente (o usuario) y no del servidor.</p>
+                <strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong>
+                <p>Sí, ya que es un error del lado del servidor, y el desarrollador se encarga de que su sitio pueda ser visualizado por otros usuarios; es quien puede meter mano al servidor.</p>
+                <strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong>
+                <p>Significa que ese atributo que provenía de una versión anterior de HTML ya no se utiliza más en HTML5. Un ejemplo sería el tag 'center'; se prefiere el uso de 'text-align'</p>
+                <strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong>                   <p>Se agregan nuevos elementos, se deprecian algunos, y HTML5 toma más un enfoque de ser directamente para estructura del contenido de un sitio, y no su diseño.</p>
+                <strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong>
+                <p>La tabla se define con el tag 'table', dicha puede ser un encabezado 'thead', un pie 'tfoot' y un cuerpo 'tbody'. Cada renglón se define con 'tr' y cada celda con 'td'</p>
+                <strong>¿Cuáles son los principales controles de una forma HTML5?</strong>
+                <p>legend, fieldset, input, textarea, button</p>
+                <strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</strong>
+                <p>466/555 en Firefox 40.0.2</p>
+        </section>
+        <footer>
+           <!-- Referencias -->
+           <p>Referencias</p>
+            <p>Webopedia (2015). Webopedia. Recuperado de http://www.webopedia.com/DidYouKnow/Internet/Web_vs_Internet.asp</p>
+            <p>Bondy, B. (2008). Stackoverflow. Recuperado de http://stackoverflow.com/questions/107390/whats-the-difference-between-a-post-and-a-put-http-request</p>
+            <p>Tutorialspoint (2015). Tutorialspoint. Recuperado de http://www.tutorialspoint.com/html/html_deprecated_tags.htm</p>
+        </footer>
+    </body>
+    
+    
+</html>
