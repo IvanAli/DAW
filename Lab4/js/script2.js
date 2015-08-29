@@ -41,9 +41,14 @@ for(var i = 0; i < form.elements.length; i++) {
 function add(i) {
     var quantity = document.getElementById("q" + i);
     // window.alert(quantity.innerHTML);
-    quantity.innerHTML = quantity.innerHTML * 1 + 1;
-    subTotal.innerHTML = subTotal.innerHTML * 1 + document.getElementById("price" + i).innerHTML * 1;
-    totalPrice.innerHTML = subTotal.innerHTML * 1.16;
+    if(quantity.innerHTML < 10) {
+        quantity.innerHTML = quantity.innerHTML * 1 + 1;
+        subTotal.innerHTML = subTotal.innerHTML * 1 + document.getElementById("price" + i).innerHTML * 1;
+        totalPrice.innerHTML = truncate(subTotal.innerHTML * 1.16, 2);
+    }
+    if(quantity.innerHTML == 10) {
+        quantity.style.color = "red";
+    }
 }
 
 function remove(i) {
@@ -54,6 +59,13 @@ function remove(i) {
     if(quantity.innerHTML > 0) {
         quantity.innerHTML = quantity.innerHTML * 1 - 1;
         subTotal.innerHTML = subTotal.innerHTML * 1 - document.getElementById("price" + i).innerHTML * 1;
-        totalPrice.innerHTML = subTotal.innerHTML * 1.16;
+        totalPrice.innerHTML = truncate(subTotal.innerHTML * 1.16, 2);
+        quantity.style.color = "black";
     }
+}
+
+function truncate(n, d) {
+    var multiplier = Math.pow(10, d);
+    var num = n * multiplier;
+    return Math.floor(num) / multiplier;
 }

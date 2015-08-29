@@ -30,5 +30,11 @@ function prediction() {
     if(major == "ISC") salary *= 3;
     else salary /= 3;
    
-    window.alert("Estimado " + name + ". Tendras un salario de $" + salary + " dls anuales.");
+    window.alert("Estimado " + name + ". Tendras un salario de $" + truncate(salary, 2) + " dls anuales.");
+}
+
+function truncate(n, d) {
+    var multiplier = Math.pow(10, d);
+    var num = n * multiplier;
+    return Math.floor(num) / multiplier;
 }
