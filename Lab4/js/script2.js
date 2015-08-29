@@ -1,5 +1,4 @@
 form = document.getElementById("products");
-window.alert(form.elements.length);
 
 subTotal = document.getElementById("subtotal");
 totalPrice = document.getElementById("total");
