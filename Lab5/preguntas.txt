@@ -1,0 +1,20 @@
+﻿    ¿Cuáles son las diferencias entre los posibles valores de la propiedad position?
+    absolute: El elemento se posiciona relativo al elemento ancestor
+    relative: El elemento se posiciona relativo a su posición original
+    fixed: El elemento se posiciona relativo a la ventana
+    
+    ¿Cuáles son los valores estándar para la propiedad visibility?
+    visible, hidden, collapse
+    
+    ¿Qué es el zIndex y para qué sirve?
+    Sirve para marcar las prioridades de posición en capas entre elementos de acuerdo a cómo se muestran en la página (al frente o atrás)
+    
+    Con respecto al artículo sobre el cambio de estilos con JavaScript, considerando tu dominio actual de HTML5, JavaScript y CSS, ¿cuál de los 2 enfoques utilizarías dadas las siguientes situaciones? (Argumenta tu respuesta):
+        Una microempresa de tus compas de la secundaria, te pide que le hagas su página web. Como apenas están empezando el presupuesto es reducido y argumentan que la página es muy "sencilla" y que la hagas como quieras y que le pongas lo que quieras. Cada vez que les muestras la página terminada, surgen nuevas ideas de ampliaciones y se les ocurre que se vería mejor en otro color.
+     Utilizaría el enfoque de clases, porque de esa manera, todos los elementos a los que les aplico algo único los puedo cambiar solamente modificando el selector para esa clase, en vez de hacerlo uno por uno.
+        
+        Tienes una increíble idea para tu propia startup. La quieres echar a andar cuanto antes y estás convencido que en un par de meses crecerá a ritmo facebookero.
+     Enfoque de clases también. Si será un sitio grande, busco que tenga mantenibilidad y es más ordenado de esta forma.
+        
+        Eres un intern de Google, y estás dispuesto a demostrar que deben contratarte.
+     El segundo enfoque. Demuestra el amplio conocimiento en JavaScript y cómo ves la mantenibilidad del sistema (la página web) a futuro.

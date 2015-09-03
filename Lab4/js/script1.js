@@ -1,9 +1,10 @@
 /*validBtn = document.getElementById("validate");
 validBtn.onclick = validate;*/
 pw2 = document.getElementById("pw2");
-pw2.oninput = validate;
+pw2.onclick = validate;
 
 function validate() {
+	window.alert("yes");
     var pw1 = document.getElementById("pw1");
     // var pw2 = document.getElementById("pw2");
     var text = document.getElementById("text");
