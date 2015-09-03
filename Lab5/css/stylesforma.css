@@ -1,0 +1,37 @@
+body {
+    font-family: 'Arial';
+}
+
+#nameMessage, #hobbyMessage, #languageMessage {
+    font-weight: 300;   
+    color: dimgray;
+    visibility: hidden;
+}
+
+span {
+    border: 2px solid gray;
+    background-color: azure;
+    padding: 0.5em;
+}
+
+#nameMessage {
+    position: absolute;
+    top: 5px;
+    left: 270px;
+}
+
+#hobbyMessage {
+    position: absolute;
+    top: 35px;
+    left: 260px;
+}
+
+#languageMessage {
+    position: absolute;
+    top: 70px;
+    left: 450px;
+}
+
+#dynamic {
+ line-height: 2em;   
+}
