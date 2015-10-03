@@ -1,0 +1,15 @@
+.form_centered {
+    width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 3px solid #FEEFAA;
+    background-color: #FFEEFF;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+.courier {
+    font-family: Courier;
+}
