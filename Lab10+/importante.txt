@@ -1,0 +1,2 @@
+Para laboratorios 10 en adelante, lo apliqué al proyecto, el cual puedes
+revisar bajo el repositorio llamado ConsultoresPatrimoniales.
