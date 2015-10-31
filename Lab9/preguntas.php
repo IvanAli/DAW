@@ -1,7 +1,5 @@
 <?php
     session_start();
-    echo $_SESSION['name'];
-    echo $_SESSION['matricula'];
  ?>
 
 <html>
@@ -44,6 +42,8 @@
             }
              ?>
         </p>
+            <img style="float: right;" height="50px" src="uploads/<?php echo $_SESSION["imagen"]?>">
+
         <hr />
         <section>
             <h3>Preguntas</h3>
@@ -71,7 +71,7 @@
                 Por ejemplo: <span class="courier">$file_name = time() . "_" . $uploaded_file_name;</span>
             </p>
         </section>
-
+        <?php session_unset(); session_destroy(); ?>
     </div>
 
 </body>

@@ -21,9 +21,13 @@
 
     <form method="post" action="controller.php" enctype="multipart/form-data">
         <label for="name">Nombre: </label> <input type="text" name="name">
-        <?php echo $nameError; ?><br /><br />
+        <?php
+            if(isset($_SESSION['nameError'])) {
+                echo $_SESSION['nameError'];
+            }
+        ?><br /><br />
         <label for="matricula">Matrícula: </label> <input type="text" name="matricula">
-        <?php echo $matriculaError; ?><br /><br />
+        <?php if(isset($_SESSION['matriculaError'])) echo $_SESSION['matriculaError']; ?><br /><br />
         <label for="major">Carrera: </label>
         <select name="major">
             <option value="ISC">
@@ -48,12 +52,12 @@
                 IMA
             </option>
         </select>
-        <?php echo $majorError; ?><br />
+        <?php if(isset($_SESSION['majorError'])) echo $_SESSION['majorError']; ?><br />
         <p>
             Sube una imagen de ti
         </p>
         <input type="file" name="imageToUpload" id="imageToUpload">
-        <?php echo $imageError; ?><br />
+        <?php if(isset($_SESSION['imageError'])) echo $_SESSION['imageError']; ?><br />
         <input type="submit" value="Enviar">
         <?php
             if(array_key_exists("missingFields", $_GET))
