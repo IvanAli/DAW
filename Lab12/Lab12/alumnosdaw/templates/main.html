@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Preguntas del lab</title>
+    <meta charset="utf-8">
+</head>
+<body style="font-family: Arial;">
+    <div style="width: 80%; margin: 0 auto;">
+
+
+    <p>
+        <h3>Servicio web para la consulta de alumnos en DAW</h3>
+        <strong>Para acceder a la lista de alumnos, se hace a través de
+        http://nombredelhost/alumnos/</strong>
+        <strong>Asimismo, el servicio cuenta con la opción de agregar un alumno.
+        A través de cURL o HTTPie (un módulo de Python)</strong>
+        <p>
+            Con cURL: curl --data "nombre=value1&apellido=value2" http://127.0.0.1:8000/alumnos/
+        </p>
+        <p>
+            Con HTTPie: http http://127.0.0.1:8000/alumnos/ nombre="value1" apellido="value2"
+        </p>
+    </p>
+    <strong>¿A qué se refiere la descentralización de servicios web?</strong>
+    <p>
+        Se refiere a la estrategia de separación de los métodos de comunicación entre dos aplicaciones
+        en la web, y esto sirve para que independientemente de la implementación de uno o del otro,
+        uno pueda acceder a la interfaz de aplicación del otro sin saber cómo está implementando, solo
+        con saber con qué funcionalidades cuenta. La descentralización también permite que desarrolladores
+        puedan integrar el trabajo de otros en su trabajo.
+    </p>
+    <strong>¿Cómo puede implementarse un entorno con servicios web disponibles aún cuando falle un servidor?</strong>
+    <p>
+        El servicio puede estar alojado en diferentes servidores, de tal manera que al fallar uno, pueda
+        acceder al mismo servicio alojado en otro servidor que esté funcionando. Esto se logra a través
+        de load balancing, que asimismo permite la distribución de cargas entre los múltiples servidores que cuentan
+        con el servicio web.
+    </p>
+    </div>
+</body>
+</html>
