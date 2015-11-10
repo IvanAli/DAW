@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Lab 10</title>
+    <meta charset="utf-8">
+</head>
+<body style="font-family: Arial; width: 80%; margin: 0 auto;">
+    <p>
+        Laboratorio aplicado al proyecto de la materia.
+    </p>
+    <p>
+        Para ver la interacción de la aplicación web con la base de datos, revisar el proyecto
+        en el siguiente link: http://consultorespatrimoniales.azurewebsites.net/, o en dado
+        caso que la página esté caida, revisarlo en el repositorio https://github.com/IvanAli/ConsultoresPatrimoniales
+    </p>
+    <section>
+        <h3>Preguntas</h3>
+        <strong>¿Por qué es una buena práctica separar el modelo del controlador?</strong>
+        <p>
+            Porque un buen diseño de un sistema de software sigue prácticas como tener
+            sus componentes separados si es que no tienen relación alguna en la funcionalidad,
+            manteniendo de esa manera un alto grado de cohesión. En este caso, los modelos representan
+            las tablas en una base de datos y el controlador verifica que la data del request
+            enviado por el cliente sea válido, para después posiblemente pasar a guardarse
+            a la base de datos. Funcionalidades diferentes, pero funcionan mutuamente.
+        </p>
+        <strong>¿Qué es ODBC y para qué es útil?</strong>
+        <p>
+            ODBC son las siglas para "Object DataBase Connectivity". ODBC es un método estándar
+            para el acceso a la data de una base de datos desde cualquier aplicación sin importar
+            el sistema de manejo de base de datos (DBMS) que se utiliza para almacenar la información. Esto se logra a través de una
+            capa, llamada database driver, entre la aplicación y el DBMS.
+            La función de esta capa es traducir todo query de la aplicación a comandos entendibles por el DBMS.
+            Para que esto sea posible, la aplicación debe ser capaz de crear comandos ODBC y el DBMS debe capaz
+            de responder a ellos. Su utilidad radica en que el desarrollador no debe preocuparse por el DBMS <div class="container">
+             el que su aplicación se conecta, ya que el driver hará la función de interfaz entre ambos componentes.
+            </div>
+        </p>
+        <strong>¿Qué técnicas puedes utilizar para evitar ataques de SQL Injection?</strong>
+        <p>
+            Jamás confiar en el input de un usuario en una forma. El usuario se puede equivocar, ya sea intencional
+            o no intencionalmente. Por ello, los datos de una forma siempre deben sanitizarse. También, cualquier query
+            hacia la base de datos jamás debe hacerse directamente desde los datos de una forma. Ya que se haya validado
+            que no se ha inyectado código SQL en la forma, se puede proseguir a hacer un query con la base de datos.
+            También, los permisos del usuario en su interacción con la base de datos deben estar restringidos, en especial
+            la operación de eliminar.
+        </p>
+    </section>
+</body>
+</html>
