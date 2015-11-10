@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>AJAX test</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <label for="acmteam">Busca un equipo clasificado para el regional del ACM 2015 </label>
+    <input type="text" onkeyup="showSuggestions(this.value)" name="acmteam">
+    <div id="teamsuggestion"></div>
+    <br />
+    <strong>Preguntas</strong>
+    <select name="preguntasopt" onchange="showQuestion(this.value)">
+        <option value="">
+            Selecciona una pregunta
+        </option>
+        <option value="question1">
+            ¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?
+        </option>
+        <option value="question2">
+            ¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?
+        </option>
+        <option value="question3">
+            ¿Qué es JSON?
+        </option>
+    </select>
+
+    <div id="preguntas">
+    </div>
+    <br />
+
+    <script language="javascript">
+    function showSuggestions(str) {
+        if(str.length == 0) {
+            document.getElementById("teamsuggestion").innerHTML = "";
+            return;
+        }
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(xhttp.readyState == 4 && xhttp.status == 200) {
+                document.getElementById("teamsuggestion").innerHTML = xhttp.responseText;
+            }
+        }
+        xhttp.open("GET", "getEquipos.php?q=" + str, true);
+        xhttp.send();
+    }
+    function showQuestion(str) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(xhttp.readyState == 4 && xhttp.status == 200) {
+                document.getElementById("preguntas").innerHTML = xhttp.responseText;
+            }
+        }
+        xhttp.open("GET", "getQuestionAnswer.php?q=" + str , true);
+        xhttp.send();
+    }
+    </script>
+</body>
+</html>
